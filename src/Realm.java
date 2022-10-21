@@ -91,14 +91,6 @@ public class Realm {
         });
     }
 
-    interface FightCallBack {
-        void fightWin();
-
-        void fightLost();
-
-    }
-
-
     private static FantasyCharacter createMonster() {
         int random = (int) (Math.random() * 10);
         if (random % 2 == 0) {

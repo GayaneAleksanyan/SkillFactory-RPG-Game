@@ -1,7 +1,7 @@
 package rpg;
 
 public class Battle {
-    public void fight(Hero hero, FantasyCharacter monster, Realm.FightCallBack fightCallBack) {
+    public void fight(Hero hero, FantasyCharacter monster, FightCallBack fightCallBack) {
         Runnable runnable = () -> {
             int turn = 1;
             boolean isFightEnded = false;
@@ -29,7 +29,7 @@ public class Battle {
         thread.start();
     }
 
-    private boolean makeHit(FantasyCharacter defender, FantasyCharacter attacker, Realm.FightCallBack fightCallBack) {
+    private boolean makeHit(FantasyCharacter defender, FantasyCharacter attacker, FightCallBack fightCallBack) {
         int hit = attacker.attack();
         int defenderHealth = defender.getHp() - hit;
         if (hit != 0) {
